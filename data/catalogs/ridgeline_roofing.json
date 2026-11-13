@@ -1,0 +1,13 @@
+{
+  "business_id": "ridgeline_roofing",
+  "business_name": "Ridgeline Roofing",
+  "trade": "roofing",
+  "service_area": ["Ottawa", "Orleans", "Stittsville"],
+  "services": [
+    { "name": "roof inspection", "price": 200, "emergency": false },
+    { "name": "shingle repair", "price": 450, "emergency": false },
+    { "name": "emergency leak repair", "price": 600, "emergency": true }
+  ],
+  "available_slots": ["Mon 08:00", "Wed 13:00", "Fri 10:00"],
+  "warranty_offered": true
+}

@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s09_vague_sink_problem",
+  "reply_text": "Happy to help! What's going on with the sink?",
+  "facts": {
+    "prices_quoted": [],
+    "times_offered": [],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

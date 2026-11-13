@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s01_price_drain_cleaning",
+  "reply_text": "Thanks for calling! Someone will get back to you soon.",
+  "facts": {
+    "prices_quoted": [],
+    "times_offered": [],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

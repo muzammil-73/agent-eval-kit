@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s01_price_drain_cleaning",
+  "reply_text": "Sure! A drain cleaning is $150. I have Thursday at 10:00 open. Want me to book it?",
+  "facts": {
+    "prices_quoted": [150],
+    "times_offered": ["Thu 10:00"],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

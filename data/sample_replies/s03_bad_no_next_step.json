@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s03_out_of_area_toronto",
+  "reply_text": "Sorry, we don't serve Toronto. Goodbye.",
+  "facts": {
+    "prices_quoted": [],
+    "times_offered": [],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s08_roof_leak_emergency",
+  "reply_text": "Emergency leak repair is $600. I can book you Friday at 10:00.",
+  "facts": {
+    "prices_quoted": [
+      600
+    ],
+    "times_offered": [
+      "Fri 10:00"
+    ],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

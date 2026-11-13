@@ -1,0 +1,9 @@
+{
+  "business_id": "broken_two",
+  "business_name": "Broken Roofing",
+  "trade": "roofing",
+  "service_area": ["Ottawa"],
+  "services": [ { "name": "roof inspection", "price": 200 } ],
+  "available_slots": ["Thursday morning"],
+  "warranty_offered": true
+}

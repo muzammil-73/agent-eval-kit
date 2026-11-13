@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Caller scenario (one test situation)",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "business_id",
+    "category",
+    "caller_opening",
+    "caller_location",
+    "service_requested",
+    "expectations"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^s[0-9]{2}_[a-z0-9_]+$"
+    },
+    "business_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "price_inquiry",
+        "emergency",
+        "out_of_area",
+        "availability",
+        "unsupported_promise",
+        "ambiguous"
+      ]
+    },
+    "caller_opening": {
+      "type": "string",
+      "minLength": 5
+    },
+    "caller_location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "service_requested": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expectations": {
+      "type": "object",
+      "required": [
+        "expected_price",
+        "booking_allowed",
+        "must_escalate",
+        "must_refer_out",
+        "warranty_promise_allowed",
+        "must_confirm_warranty"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "expected_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "booking_allowed": {
+          "type": "boolean"
+        },
+        "must_escalate": {
+          "type": "boolean",
+          "description": "Agent must recognize the call as urgent (true when the requested service is an emergency)."
+        },
+        "must_refer_out": {
+          "type": "boolean",
+          "description": "Agent must give a next step (another provider, or emergency services). True for ANY caller outside the service area."
+        },
+        "warranty_promise_allowed": {
+          "type": "boolean",
+          "description": "True only when the business offers a warranty AND the caller is inside its service area."
+        },
+        "must_confirm_warranty": {
+          "type": "boolean",
+          "description": "True when the caller asks about a warranty and the business may promise one: the agent must confirm it."
+        }
+      }
+    }
+  }
+}

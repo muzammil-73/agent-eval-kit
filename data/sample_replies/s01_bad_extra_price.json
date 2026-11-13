@@ -1,0 +1,17 @@
+{
+  "scenario_id": "s01_price_drain_cleaning",
+  "reply_text": "Drain cleaning is $150, and faucet replacement is $120 if you need it. I have Thursday at 10:00 open.",
+  "facts": {
+    "prices_quoted": [
+      150,
+      120
+    ],
+    "times_offered": [
+      "Thu 10:00"
+    ],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

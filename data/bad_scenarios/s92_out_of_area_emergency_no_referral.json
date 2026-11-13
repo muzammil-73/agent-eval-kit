@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s92_out_of_area_emergency_no_referral",
+  "business_id": "dave_landscaping",
+  "category": "emergency",
+  "caller_opening": "A tree fell on my car in Gloucester, I need help now!",
+  "caller_location": "Gloucester",
+  "service_requested": "fallen tree removal",
+  "expectations": {
+    "expected_price": null,
+    "booking_allowed": false,
+    "must_escalate": true,
+    "must_refer_out": false,
+    "warranty_promise_allowed": false,
+    "must_confirm_warranty": false
+  }
+}

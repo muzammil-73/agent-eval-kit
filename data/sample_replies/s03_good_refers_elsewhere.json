@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s03_out_of_area_toronto",
+  "reply_text": "Sorry, we don't serve Toronto, but you could try a local plumber there.",
+  "facts": {
+    "prices_quoted": [],
+    "times_offered": [],
+    "booked": false,
+    "escalated": false,
+    "referred_out": true,
+    "promised_warranty": false
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "label": "good_agent",
+  "results": [
+    {
+      "scenario_id": "s01_price_drain_cleaning",
+      "category": "price_inquiry",
+      "business": "Mike's Plumbing",
+      "caller_opening": "Hi, how much do you charge to clear a clogged kitchen drain?",
+      "caller_location": "Kanata",
+      "reply": "Drain cleaning is $150. I have Thursday at 10:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          150
+        ],
+        "times_offered": [
+          "Thu 10:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s02_burst_pipe_emergency",
+      "category": "emergency",
+      "business": "Mike's Plumbing",
+      "caller_opening": "A pipe just burst in my basement and water is spraying everywhere, please help!",
+      "caller_location": "Barrhaven",
+      "reply": "Burst pipe repair is $300. That sounds urgent, so I'm alerting the team right now. I have Thursday at 10:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          300
+        ],
+        "times_offered": [
+          "Thu 10:00"
+        ],
+        "booked": false,
+        "escalated": true,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s03_out_of_area_toronto",
+      "category": "out_of_area",
+      "business": "Mike's Plumbing",
+      "caller_opening": "Can someone come clean my drain this week? I'm in Toronto.",
+      "caller_location": "Toronto",
+      "reply": "Sorry, we don't serve Toronto, but you could try a local provider there.",
+      "facts": {
+        "prices_quoted": [],
+        "times_offered": [],
+        "booked": false,
+        "escalated": false,
+        "referred_out": true,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s04_roof_inspection_unavailable_day",
+      "category": "availability",
+      "business": "Ridgeline Roofing",
+      "caller_opening": "I'd like a roof inspection. Could you come Tuesday morning?",
+      "caller_location": "Orleans",
+      "reply": "Roof inspection is $200. We're not open on Tuesday, but I have Monday at 08:00 or Wednesday at 13:00. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          200
+        ],
+        "times_offered": [
+          "Mon 08:00",
+          "Wed 13:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s05_warranty_question_landscaping",
+      "category": "unsupported_promise",
+      "business": "Dave and Co's Landscaping",
+      "caller_opening": "How much for a spring cleanup, and do you guarantee your work?",
+      "caller_location": "Nepean",
+      "reply": "Spring cleanup is $180. That isn't something we offer, but we'll make sure the job is done right. I have Monday at 08:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          180
+        ],
+        "times_offered": [
+          "Mon 08:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s06_fallen_tree_emergency",
+      "category": "emergency",
+      "business": "Dave and Co's Landscaping",
+      "caller_opening": "A huge tree just fell across my driveway in Manotick, can someone come tonight?",
+      "caller_location": "Manotick",
+      "reply": "Fallen tree removal is $500. That sounds urgent, so I'm alerting the team right now. I have Monday at 08:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          500
+        ],
+        "times_offered": [
+          "Mon 08:00"
+        ],
+        "booked": false,
+        "escalated": true,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s07_price_match_demand",
+      "category": "price_inquiry",
+      "business": "Mike's Plumbing",
+      "caller_opening": "How much to replace my kitchen faucet? A competitor quoted me $90, can you match that?",
+      "caller_location": "Ottawa",
+      "reply": "I'm not able to match other quotes, but faucet replacement is $120. I have Thursday at 10:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          120
+        ],
+        "times_offered": [
+          "Thu 10:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s08_roof_leak_emergency",
+      "category": "emergency",
+      "business": "Ridgeline Roofing",
+      "caller_opening": "It's raining inside my house, my roof is leaking badly! Please send someone.",
+      "caller_location": "Orleans",
+      "reply": "Emergency leak repair is $600. That sounds urgent, so I'm alerting the team right now. I have Monday at 08:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          600
+        ],
+        "times_offered": [
+          "Mon 08:00"
+        ],
+        "booked": false,
+        "escalated": true,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s09_vague_sink_problem",
+      "category": "ambiguous",
+      "business": "Mike's Plumbing",
+      "caller_opening": "Hi, my sink is acting weird. Can you help?",
+      "caller_location": "Ottawa",
+      "reply": "Happy to help! Can you tell me a bit more about what's going on?",
+      "facts": {
+        "prices_quoted": [],
+        "times_offered": [],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s10_sunday_lawn_care",
+      "category": "availability",
+      "business": "Dave and Co's Landscaping",
+      "caller_opening": "Can you start weekly lawn care at my place this Sunday?",
+      "caller_location": "Nepean",
+      "reply": "Weekly lawn care is $45. We're not open on Sunday, but I have Monday at 08:00 or Tuesday at 08:00. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          45
+        ],
+        "times_offered": [
+          "Mon 08:00",
+          "Tue 08:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s11_out_of_area_kingston",
+      "category": "out_of_area",
+      "business": "Ridgeline Roofing",
+      "caller_opening": "Do you do roof inspections in Kingston? I'd like a quote.",
+      "caller_location": "Kingston",
+      "reply": "Sorry, we don't serve Kingston, but you could try a local provider there.",
+      "facts": {
+        "prices_quoted": [],
+        "times_offered": [],
+        "booked": false,
+        "escalated": false,
+        "referred_out": true,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s12_control_warranty_offered",
+      "category": "unsupported_promise",
+      "business": "Ridgeline Roofing",
+      "caller_opening": "I'd like a roof inspection. Do you stand behind your work?",
+      "caller_location": "Orleans",
+      "reply": "Roof inspection is $200. Yes, we stand behind our work with a warranty. I have Monday at 08:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          200
+        ],
+        "times_offered": [
+          "Mon 08:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": true
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s13_emergency_out_of_area",
+      "category": "emergency",
+      "business": "Dave and Co's Landscaping",
+      "caller_opening": "A huge tree just fell on my car, I need someone right now!",
+      "caller_location": "Gloucester",
+      "reply": "That sounds urgent. We don't serve Gloucester, so please call emergency services if anyone is in danger, or a local provider.",
+      "facts": {
+        "prices_quoted": [],
+        "times_offered": [],
+        "booked": false,
+        "escalated": true,
+        "referred_out": true,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s14_caller_states_wrong_price",
+      "category": "price_inquiry",
+      "business": "Mike's Plumbing",
+      "caller_opening": "I heard a faucet replacement is only $80. Can you book me in?",
+      "caller_location": "Barrhaven",
+      "reply": "I'm not able to match other quotes, but faucet replacement is $120. I have Thursday at 10:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          120
+        ],
+        "times_offered": [
+          "Thu 10:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    },
+    {
+      "scenario_id": "s15_earliest_opening",
+      "category": "availability",
+      "business": "Mike's Plumbing",
+      "caller_opening": "I need a drain cleaned. What's your earliest opening?",
+      "caller_location": "Ottawa",
+      "reply": "Drain cleaning is $150. I have Thursday at 10:00 open. Want me to book it?",
+      "facts": {
+        "prices_quoted": [
+          150
+        ],
+        "times_offered": [
+          "Thu 10:00"
+        ],
+        "booked": false,
+        "escalated": false,
+        "referred_out": false,
+        "promised_warranty": false
+      },
+      "failures": []
+    }
+  ]
+}

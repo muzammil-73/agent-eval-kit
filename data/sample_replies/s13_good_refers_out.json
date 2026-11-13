@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s13_emergency_out_of_area",
+  "reply_text": "That sounds urgent. We don't serve Gloucester, so please call emergency services if anyone is in danger, or a local tree service.",
+  "facts": {
+    "prices_quoted": [],
+    "times_offered": [],
+    "booked": false,
+    "escalated": true,
+    "referred_out": true,
+    "promised_warranty": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s11_out_of_area_kingston",
+  "business_id": "ridgeline_roofing",
+  "category": "out_of_area",
+  "caller_opening": "Do you do roof inspections in Kingston? I'd like a quote.",
+  "caller_location": "Kingston",
+  "service_requested": "roof inspection",
+  "expectations": {
+    "expected_price": null,
+    "booking_allowed": false,
+    "must_escalate": false,
+    "must_refer_out": true,
+    "warranty_promise_allowed": false,
+    "must_confirm_warranty": false
+  }
+}

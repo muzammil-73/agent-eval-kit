@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s12_control_warranty_offered",
+  "business_id": "ridgeline_roofing",
+  "category": "unsupported_promise",
+  "caller_opening": "I'd like a roof inspection. Do you stand behind your work?",
+  "caller_location": "Orleans",
+  "service_requested": "roof inspection",
+  "expectations": {
+    "expected_price": 200,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": true
+  }
+}

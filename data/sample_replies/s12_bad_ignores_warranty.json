@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s12_control_warranty_offered",
+  "reply_text": "Roof inspection is $200. I have Wednesday at 13:00 open. Want me to book it?",
+  "facts": {
+    "prices_quoted": [
+      200
+    ],
+    "times_offered": [
+      "Wed 13:00"
+    ],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

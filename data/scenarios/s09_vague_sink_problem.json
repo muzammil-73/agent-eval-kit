@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s09_vague_sink_problem",
+  "business_id": "mikes_plumbing",
+  "category": "ambiguous",
+  "caller_opening": "Hi, my sink is acting weird. Can you help?",
+  "caller_location": "Ottawa",
+  "service_requested": null,
+  "expectations": {
+    "expected_price": null,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

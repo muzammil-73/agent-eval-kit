@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s10_sunday_lawn_care",
+  "business_id": "dave_landscaping",
+  "category": "availability",
+  "caller_opening": "Can you start weekly lawn care at my place this Sunday?",
+  "caller_location": "Nepean",
+  "service_requested": "weekly lawn care",
+  "expectations": {
+    "expected_price": 45,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": false,
+    "must_confirm_warranty": false
+  }
+}

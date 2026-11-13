@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent facts (what the agent said, as a fixed form)",
+  "type": "object",
+  "required": ["prices_quoted", "times_offered", "booked", "escalated", "referred_out", "promised_warranty"],
+  "additionalProperties": false,
+  "properties": {
+    "prices_quoted": { "type": "array", "items": { "type": "number", "exclusiveMinimum": 0 } },
+    "times_offered": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) [0-2][0-9]:[0-5][0-9]$" }
+    },
+    "booked": { "type": "boolean" },
+    "escalated": { "type": "boolean" },
+    "referred_out": { "type": "boolean" },
+    "promised_warranty": { "type": "boolean" }
+  }
+}

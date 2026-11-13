@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s04_roof_inspection_unavailable_day",
+  "business_id": "ridgeline_roofing",
+  "category": "availability",
+  "caller_opening": "I'd like a roof inspection. Could you come Tuesday morning?",
+  "caller_location": "Orleans",
+  "service_requested": "roof inspection",
+  "expectations": {
+    "expected_price": 200,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

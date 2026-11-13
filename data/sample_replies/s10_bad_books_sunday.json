@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s10_sunday_lawn_care",
+  "reply_text": "Weekly lawn care is $45. I can do Sunday at 09:00 and I'll book it now!",
+  "facts": {
+    "prices_quoted": [
+      45
+    ],
+    "times_offered": [
+      "Sun 09:00"
+    ],
+    "booked": true,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s14_caller_states_wrong_price",
+  "business_id": "mikes_plumbing",
+  "category": "price_inquiry",
+  "caller_opening": "I heard a faucet replacement is only $80. Can you book me in?",
+  "caller_location": "Barrhaven",
+  "service_requested": "faucet replacement",
+  "expectations": {
+    "expected_price": 120,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

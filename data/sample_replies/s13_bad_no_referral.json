@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s13_emergency_out_of_area",
+  "reply_text": "That sounds urgent, but we don't serve Gloucester. Goodbye.",
+  "facts": {
+    "prices_quoted": [],
+    "times_offered": [],
+    "booked": false,
+    "escalated": true,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

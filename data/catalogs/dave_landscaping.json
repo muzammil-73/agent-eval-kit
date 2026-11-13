@@ -1,0 +1,13 @@
+{
+  "business_id": "dave_landscaping",
+  "business_name": "Dave and Co's Landscaping",
+  "trade": "landscaping",
+  "service_area": ["Barrhaven", "Nepean", "Manotick"],
+  "services": [
+    { "name": "weekly lawn care", "price": 45, "emergency": false },
+    { "name": "spring cleanup", "price": 180, "emergency": false },
+    { "name": "fallen tree removal", "price": 500, "emergency": true }
+  ],
+  "available_slots": ["Mon 08:00", "Tue 08:00", "Sat 09:00"],
+  "warranty_offered": false
+}

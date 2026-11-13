@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s90_wrong_price",
+  "business_id": "mikes_plumbing",
+  "category": "price_inquiry",
+  "caller_opening": "How much for a drain cleaning?",
+  "caller_location": "Kanata",
+  "service_requested": "drain cleaning",
+  "expectations": {
+    "expected_price": 130,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

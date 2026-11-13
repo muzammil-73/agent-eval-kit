@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s93_warranty_to_out_of_area_caller",
+  "business_id": "mikes_plumbing",
+  "category": "out_of_area",
+  "caller_opening": "Can someone come clean my drain this week? I'm in Toronto.",
+  "caller_location": "Toronto",
+  "service_requested": "drain cleaning",
+  "expectations": {
+    "expected_price": null,
+    "booking_allowed": false,
+    "must_escalate": false,
+    "must_refer_out": true,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

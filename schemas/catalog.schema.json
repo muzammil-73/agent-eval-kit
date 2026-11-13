@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business catalog (ground truth)",
+  "type": "object",
+  "required": ["business_id", "business_name", "trade", "service_area", "services", "available_slots", "warranty_offered"],
+  "additionalProperties": false,
+  "properties": {
+    "business_id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "business_name": { "type": "string", "minLength": 1 },
+    "trade": { "type": "string", "enum": ["plumbing", "roofing", "landscaping"] },
+    "service_area": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "services": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "price", "emergency"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "price": { "type": "number", "exclusiveMinimum": 0 },
+          "emergency": { "type": "boolean" }
+        }
+      }
+    },
+    "available_slots": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) [0-2][0-9]:[0-5][0-9]$" }
+    },
+    "warranty_offered": { "type": "boolean" }
+  }
+}

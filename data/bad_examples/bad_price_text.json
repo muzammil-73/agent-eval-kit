@@ -1,0 +1,9 @@
+{
+  "business_id": "broken_one",
+  "business_name": "Broken Plumbing",
+  "trade": "plumbing",
+  "service_area": ["Ottawa"],
+  "services": [ { "name": "drain cleaning", "price": "about 150", "emergency": false } ],
+  "available_slots": ["Thu 10:00"],
+  "warranty_offered": true
+}

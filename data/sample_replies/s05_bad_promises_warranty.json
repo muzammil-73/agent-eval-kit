@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s05_warranty_question_landscaping",
+  "reply_text": "Spring cleanup is $180, and we guarantee all our work. I have Monday at 08:00 open.",
+  "facts": {
+    "prices_quoted": [
+      180
+    ],
+    "times_offered": [
+      "Mon 08:00"
+    ],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": true
+  }
+}

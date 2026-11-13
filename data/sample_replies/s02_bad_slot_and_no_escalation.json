@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s02_burst_pipe_emergency",
+  "reply_text": "Burst pipe repair is $300. I can book you for Friday at 11:00.",
+  "facts": {
+    "prices_quoted": [300],
+    "times_offered": ["Fri 11:00"],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s15_earliest_opening",
+  "reply_text": "Drain cleaning is $150. I have Wednesday at 15:00.",
+  "facts": {
+    "prices_quoted": [
+      150
+    ],
+    "times_offered": [
+      "Wed 15:00"
+    ],
+    "booked": false,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

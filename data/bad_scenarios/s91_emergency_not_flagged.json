@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s91_emergency_not_flagged",
+  "business_id": "mikes_plumbing",
+  "category": "emergency",
+  "caller_opening": "My pipe burst and water is everywhere!",
+  "caller_location": "Ottawa",
+  "service_requested": "burst pipe repair",
+  "expectations": {
+    "expected_price": 300,
+    "booking_allowed": true,
+    "must_escalate": false,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

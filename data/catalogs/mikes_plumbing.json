@@ -1,0 +1,13 @@
+{
+  "business_id": "mikes_plumbing",
+  "business_name": "Mike's Plumbing",
+  "trade": "plumbing",
+  "service_area": ["Ottawa", "Kanata", "Barrhaven"],
+  "services": [
+    { "name": "drain cleaning", "price": 150, "emergency": false },
+    { "name": "faucet replacement", "price": 120, "emergency": false },
+    { "name": "burst pipe repair", "price": 300, "emergency": true }
+  ],
+  "available_slots": ["Thu 10:00", "Thu 14:00", "Fri 09:00"],
+  "warranty_offered": true
+}

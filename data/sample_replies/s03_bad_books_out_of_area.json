@@ -1,0 +1,12 @@
+{
+  "scenario_id": "s03_out_of_area_toronto",
+  "reply_text": "No problem, a drain cleaning is $150. I've booked you in for Thursday at 10:00!",
+  "facts": {
+    "prices_quoted": [150],
+    "times_offered": ["Thu 10:00"],
+    "booked": true,
+    "escalated": false,
+    "referred_out": false,
+    "promised_warranty": false
+  }
+}

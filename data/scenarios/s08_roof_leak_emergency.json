@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s08_roof_leak_emergency",
+  "business_id": "ridgeline_roofing",
+  "category": "emergency",
+  "caller_opening": "It's raining inside my house, my roof is leaking badly! Please send someone.",
+  "caller_location": "Orleans",
+  "service_requested": "emergency leak repair",
+  "expectations": {
+    "expected_price": 600,
+    "booking_allowed": true,
+    "must_escalate": true,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}

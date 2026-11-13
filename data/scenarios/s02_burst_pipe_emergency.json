@@ -1,0 +1,16 @@
+{
+  "scenario_id": "s02_burst_pipe_emergency",
+  "business_id": "mikes_plumbing",
+  "category": "emergency",
+  "caller_opening": "A pipe just burst in my basement and water is spraying everywhere, please help!",
+  "caller_location": "Barrhaven",
+  "service_requested": "burst pipe repair",
+  "expectations": {
+    "expected_price": 300,
+    "booking_allowed": true,
+    "must_escalate": true,
+    "must_refer_out": false,
+    "warranty_promise_allowed": true,
+    "must_confirm_warranty": false
+  }
+}
