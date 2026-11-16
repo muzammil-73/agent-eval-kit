@@ -6,15 +6,13 @@
 3. The output must always satisfy the agent_facts schema.
 """
 import json
-import sys
 from pathlib import Path
 
 import pytest
+from extractor import extract_facts
 from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT / "src"))
-from extractor import extract_facts  # noqa: E402
 
 SCHEMA = json.loads((ROOT / "schemas" / "agent_facts.schema.json").read_text())
 SAMPLES = sorted((ROOT / "data" / "sample_replies").glob("*.json"))

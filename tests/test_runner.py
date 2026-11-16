@@ -3,15 +3,9 @@ every known bug we can inject into a mock agent must be CAUGHT by the kit.
 
 Run with:  python -m pytest tests -v
 """
-import sys
-from pathlib import Path
-
 import pytest
-
-ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT / "src"))
-import run_eval  # noqa: E402
-from mock_agents import ALL_FLAWS, DEFAULT_FLAWED, MockAgent  # noqa: E402
+import run_eval
+from mock_agents import ALL_FLAWS, DEFAULT_FLAWED, MockAgent
 
 # For each injected bug: the failure type it MUST trigger, and the types it is allowed to trigger.
 MUST_CATCH = {

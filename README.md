@@ -69,12 +69,14 @@ Mistakes found in the flawed agent, by type:
 
 ## How to run
 
-Needs Python 3.9 or newer.
+Needs Python 3.9 or newer. Tested on 3.9, 3.11 and 3.13.
 
 ```bash
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 python src/demo.py                          # short readable demo
+python src/demo.py --pause                  # same, pausing between sections
 python src/run_eval.py --agent good         # run the good agent
 python src/run_eval.py --agent flawed --label flawed_v1 --out reports/flawed_v1
 python src/run_eval.py --flaws invents_price,bad_slot,promises_warranty,adds_extra_price --label flawed_v2 --out reports/flawed_v2
@@ -94,6 +96,9 @@ A test kit is only useful if you can trust it, so it is tested with answers we a
 Together these are 109 automatic tests. A kit that approved everything would pass the good agent, and a kit that
 rejected everything would "catch" the flawed one, which is why both agents are needed.
 
+Every push runs the tests and re-validates the data files on Python 3.9, 3.11 and 3.13
+(`.github/workflows/tests.yml`), so a scenario that stops agreeing with its catalog fails the build.
+
 ## Project layout
 
 ```
@@ -104,6 +109,7 @@ schemas/              JSON schemas for catalogs, scenarios, and the six-box form
 src/                  validators, extractor, graders, mock agents, runner, demo
 tests/                the kit's own tests
 reports/              example reports
+.github/workflows/    tests and data validation on every push
 ```
 
 ## Design decisions

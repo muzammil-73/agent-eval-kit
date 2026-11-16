@@ -7,15 +7,13 @@ Run with:  python -m pytest tests -v
 """
 import json
 import os
-import sys
 from pathlib import Path
 
 import pytest
+import validate_scenarios as vs
 from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT / "src"))
-import validate_scenarios as vs  # noqa: E402
 
 CATALOG_SCHEMA = json.loads((ROOT / "schemas" / "catalog.schema.json").read_text())
 SCENARIO_SCHEMA = json.loads((ROOT / "schemas" / "scenario.schema.json").read_text())

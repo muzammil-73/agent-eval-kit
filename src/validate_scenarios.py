@@ -7,24 +7,35 @@ Usage:
     python src/validate_scenarios.py data/scenarios
     python src/validate_scenarios.py data/bad_scenarios
 """
+from __future__ import annotations
+
 import json
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).parent.parent
-SCENARIO_SCHEMA = json.loads((ROOT / "schemas" / "scenario.schema.json").read_text())
-CATALOGS = {}
-for p in (ROOT / "data" / "catalogs").glob("*.json"):
-    c = json.loads(p.read_text())
-    CATALOGS[c["business_id"]] = c
+
+
+@lru_cache(maxsize=None)
+def scenario_schema() -> dict:
+    return json.loads((ROOT / "schemas" / "scenario.schema.json").read_text())
+
+
+@lru_cache(maxsize=None)
+def catalogs() -> dict:
+    """The ground truth, keyed by business_id. Read from disk once."""
+    return {c["business_id"]: c
+            for c in (json.loads(p.read_text())
+                      for p in sorted((ROOT / "data" / "catalogs").glob("*.json")))}
 
 
 def consistency_problems(s: dict) -> list[str]:
     """Compare a scenario's expectations to the ground truth."""
     problems = []
-    cat = CATALOGS.get(s["business_id"])
+    cat = catalogs().get(s["business_id"])
     if cat is None:
         return [f"unknown business_id '{s['business_id']}'"]
     exp = s["expectations"]
@@ -65,7 +76,7 @@ def consistency_problems(s: dict) -> list[str]:
 
 
 def run(folder: Path) -> int:
-    validator = Draft202012Validator(SCENARIO_SCHEMA)
+    validator = Draft202012Validator(scenario_schema())
     bad = 0
     for path in sorted(folder.glob("*.json")):
         s = json.loads(path.read_text())

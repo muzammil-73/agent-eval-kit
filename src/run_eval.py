@@ -18,7 +18,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import grader  # noqa: E402
 from extractor import extract_facts  # noqa: E402
-from mock_agents import MockAgent, flawed_agent, good_agent, load_catalogs, load_scenarios  # noqa: E402
+from mock_agents import (ALL_FLAWS, MockAgent, flawed_agent, good_agent,  # noqa: E402
+                         load_catalogs, load_scenarios)
 
 ROOT = Path(__file__).parent.parent
 
@@ -124,7 +125,11 @@ def main():
         return
 
     if args.flaws is not None:
-        agent, label = MockAgent(f.strip() for f in args.flaws.split(",") if f.strip()), args.label or "custom_agent"
+        try:
+            agent = MockAgent(f.strip() for f in args.flaws.split(",") if f.strip())
+        except ValueError as e:
+            sys.exit(f"{e}\nKnown flaws: {', '.join(sorted(ALL_FLAWS))}")
+        label = args.label or "custom_agent"
     elif args.agent == "flawed":
         agent, label = flawed_agent(), args.label or "flawed_agent"
     else:

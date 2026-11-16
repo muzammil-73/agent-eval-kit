@@ -13,6 +13,7 @@ All checks are plain code: no AI, same answer every run.
 """
 import json
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -119,18 +120,34 @@ def grade(scenario, facts, catalog):
     return failures
 
 
+@lru_cache(maxsize=None)
+def _catalogs_by_id():
+    """Read every catalog from disk once, then keep them in memory.
+
+    Nothing in the kit modifies a catalog, so one shared copy is safe and the
+    whole suite reads each file once instead of once per graded reply.
+    """
+    return {c["business_id"]: c
+            for c in (json.loads(p.read_text())
+                      for p in sorted((ROOT / "data" / "catalogs").glob("*.json")))}
+
+
 def load_catalog(business_id):
-    for p in (ROOT / "data" / "catalogs").glob("*.json"):
-        c = json.loads(p.read_text())
-        if c["business_id"] == business_id:
-            return c
-    raise KeyError(business_id)
+    try:
+        return _catalogs_by_id()[business_id]
+    except KeyError:
+        raise KeyError(f"no catalog with business_id '{business_id}'") from None
+
+
+@lru_cache(maxsize=None)
+def load_scenario(scenario_id):
+    return json.loads((ROOT / "data" / "scenarios" / f"{scenario_id}.json").read_text())
 
 
 def grade_sample_file(path):
     """Grade one sample reply file (it names its scenario and holds the filled form)."""
     sample = json.loads(Path(path).read_text())
-    scenario = json.loads((ROOT / "data" / "scenarios" / f"{sample['scenario_id']}.json").read_text())
+    scenario = load_scenario(sample["scenario_id"])
     catalog = load_catalog(scenario["business_id"])
     return sample, grade(scenario, sample["facts"], catalog)
 

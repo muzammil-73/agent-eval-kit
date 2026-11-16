@@ -2,15 +2,12 @@
 
 Run with:  python -m pytest tests -v
 """
-import sys
 from pathlib import Path
 
+import grader
 import pytest
 
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT / "src"))
-import grader  # noqa: E402
-
 SAMPLES = ROOT / "data" / "sample_replies"
 
 EXPECTED = {

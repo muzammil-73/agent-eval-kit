@@ -1,2 +1,2 @@
-jsonschema
-pytest
+jsonschema>=4.0
+pytest>=7.0

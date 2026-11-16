@@ -13,6 +13,7 @@ Usage:
 """
 import json
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -153,21 +154,27 @@ def flawed_agent():
     return MockAgent(DEFAULT_FLAWED)
 
 
+@lru_cache(maxsize=None)
 def load_catalogs():
-    out = {}
-    for p in (ROOT / "data" / "catalogs").glob("*.json"):
-        c = json.loads(p.read_text())
-        out[c["business_id"]] = c
-    return out
+    """Every catalog, keyed by business_id. Read once, then kept in memory."""
+    return {c["business_id"]: c
+            for c in (json.loads(p.read_text())
+                      for p in sorted((ROOT / "data" / "catalogs").glob("*.json")))}
+
+
+@lru_cache(maxsize=None)
+def _all_scenarios():
+    """Read every scenario from disk once. Treated as read-only, so one copy is shared."""
+    return tuple(json.loads(p.read_text())
+                 for p in sorted((ROOT / "data" / "scenarios").glob("*.json")))
 
 
 def load_scenarios(prefixes=()):
-    items = []
-    for p in sorted((ROOT / "data" / "scenarios").glob("*.json")):
-        s = json.loads(p.read_text())
-        if not prefixes or any(s["scenario_id"].startswith(x) for x in prefixes):
-            items.append(s)
-    return items
+    """All scenarios, or only those whose id starts with one of `prefixes`."""
+    if not prefixes:
+        return list(_all_scenarios())
+    return [s for s in _all_scenarios()
+            if any(s["scenario_id"].startswith(x) for x in prefixes)]
 
 
 if __name__ == "__main__":
