@@ -69,7 +69,7 @@ Mistakes found in the flawed agent, by type:
 
 ## How to run
 
-Needs Python 3.9 or newer. Tested on 3.9, 3.11 and 3.13.
+Needs Python 3.9 or newer. CI runs on 3.10, 3.11 and 3.13; the tests also pass on 3.9.
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
@@ -96,7 +96,7 @@ A test kit is only useful if you can trust it, so it is tested with answers we a
 Together these are 109 automatic tests. A kit that approved everything would pass the good agent, and a kit that
 rejected everything would "catch" the flawed one, which is why both agents are needed.
 
-Every push runs the tests and re-validates the data files on Python 3.9, 3.11 and 3.13
+Every push runs the tests and re-validates the data files on Python 3.10, 3.11 and 3.13
 (`.github/workflows/tests.yml`), so a scenario that stops agreeing with its catalog fails the build.
 
 ## Project layout
