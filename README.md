@@ -2,6 +2,8 @@
 
 ![tests](https://github.com/muzammil-73/agent-eval-kit/actions/workflows/tests.yml/badge.svg)
 
+**Demo:** [2-minute walkthrough](https://youtu.be/vVQp5s3JbMg)
+
 A small test kit that checks whether an AI phone receptionist gives correct answers: the right price,
 real appointment times, and a proper response to emergencies.
 
